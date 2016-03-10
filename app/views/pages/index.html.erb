@@ -1,2 +1,75 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+  <style>
+
+  body{
+      background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+        ),url("/background.png") no-repeat center center fixed;
+        -webkit-background-size:cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size:cover;
+      }
+    h1{
+      color: white;
+      font-weight: bold;
+    }
+
+    .container-index{
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .text{
+      color:white;
+      font-weight: 500;
+    }
+
+    .footer-links{
+      color: white;
+      text-align: center;
+      margin-top: 30%;
+      font-size: 75%;
+    }
+    .log-in{
+     height: 250px;
+     width: 300px;
+     background: white;
+     float: right;
+     margin-top: 7%;
+
+    }
+    .sign-up{
+      height: 250px;
+      width: 300px;
+      background: white;
+      float: right;
+
+    }
+  </style>
+<div class="container-index row">
+  <div class="col-sm-6">
+    <h1> Welcome to TryAPP </h1>
+    <p class="text"> Connect with your friends, share your thoughts.<br>
+      See what everybody else is talking about. </p>
+  </div>
+  <div class="col-sm-6">
+    <div class="log-in panel">
+
+    </div>
+    <div class="sign-up panel">
+
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <p class="footer-links"> About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise 2016  TryApp </p>
+  </div>
+</div>
+
+
+<%else%>
+
+<script>document.location = "/home"</script>
+
+<%end%>
